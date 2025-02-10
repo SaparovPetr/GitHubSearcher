@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgb(145 128 128);
+    border-radius: 25px;
+    animation: fadein 1s ease-out forwards;
+}
+
+.hint {
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+.hint_failed {
+    padding-top: 10px;
+    color: #c96554;
+    font-weight: normal;
+    animation: shake 0.5s;
+}
+
+.hint_success {  
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 13px;
+    color:  rgb(61 106 70 / 100%);
+    font-weight: normal; 
+    animation: fadein 0.5s  ease-out forwards;
+}
+
+.hint_button {
+    max-width: 70px;
+    padding: 5px;
+    color: white;
+    font-size: smaller;
+    border: 1px solid white;
+    border-radius: 10px;
+    animation: pulsation 1.5s ease-out infinite;
+}
+
+@keyframes fadein {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes pulsation {
+    0% { transform: scale(1); }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}

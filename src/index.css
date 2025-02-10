@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: 'Suisse';
+  src: url("./fonts/SuisseIntl-Book.woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Suisse';
+  src: url("./fonts/SuisseIntl-Bold.woff");
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Suisse', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #323131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "source-code-pro", "Menlo", "Monaco", "Consolas", 'Courier New',
+    monospace;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+div, a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+p {
+  margin: 0;
+}
+
+
+button {
+  color: inherit;
+  background-color: inherit;
+}
+
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
