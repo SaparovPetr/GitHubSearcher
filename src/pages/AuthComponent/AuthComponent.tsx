@@ -8,7 +8,7 @@ import {
 } from "../../services/slices/userSlice";
 import { NavLink } from "react-router-dom";
 import styles from "./AuthComponent.module.css";
-import LabaledInput from "../labeledInput/LabaledInput";
+import LabaledInput from "../../components/labeledInput/LabaledInput";
 import { RequestStatus } from "../../utils/types";
 
 const AuthComponent = () => {

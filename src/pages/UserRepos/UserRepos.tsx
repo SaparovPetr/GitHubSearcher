@@ -18,7 +18,7 @@ import {
 } from "../../services/slices/reposSlice";
 import { rewriteDate } from "../../utils/rewriteDate";
 import styles from "./UserRepos.module.css";
-import LabledInput from "../labeledInput/LabaledInput";
+import LabledInput from "../../components/labeledInput/LabaledInput";
 import { RequestStatus } from "../../utils/types";
 
 const UserRepos = () => {

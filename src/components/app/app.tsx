@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import UserRepos from "../UserRepos/UserRepos";
-import AuthComponent from "../AuthComponent/AuthComponent";
 import { useAppSelector } from "../../services/store";
 import { getStatus } from "../../services/slices/userSlice";
+import AuthComponent from "../../pages/AuthComponent/AuthComponent";
+import UserRepos from "../../pages/UserRepos/UserRepos";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 
 const App = () => {
 	const reqStatus = useAppSelector(getStatus);
@@ -11,7 +12,7 @@ const App = () => {
 		<>
 			<Routes>
 				<Route path="/" element={<AuthComponent />} />
-
+				<Route path="*" element={<NotFoundPage />} />
 				{reqStatus === "Success" && (
 					<Route path="/searcher" element={<UserRepos />} />
 				)}

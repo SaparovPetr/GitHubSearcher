@@ -1,0 +1,17 @@
+.page_not_found {
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 20px;
+    padding: 5%;
+    font-weight: bold;
+    font-size: 30px;  
+}
+
+.linkToBack {
+    padding: 10px;
+    font-size: 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+}
