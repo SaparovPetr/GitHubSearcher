@@ -8,7 +8,7 @@
 
 Для получения данных использует [GitHub API](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user).
 
-## Инструкция по запуску:
+## Инструкция по запуску
 
 - установить зависимости через `npm install`,
 - запустить приложение через `npm run start`.
