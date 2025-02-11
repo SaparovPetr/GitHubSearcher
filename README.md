@@ -13,11 +13,12 @@
 Либо:
 
 - установить зависимости через `npm install`,
-- запустить приложение через `npm run start`.
+- запустить приложение через `npm run start`,
 
-Запустить докер-контейнер:
+либо запустить на `http://localhost:8080/` из докер-контейнера:
 
-- `docker pull petrsaparov/git-hub-searcher:latest`.
+- `docker pull petrsaparov/git-hub-searcher:latest`,
+- `sudo docker run -d -p 8080:80 --name git-hub-searcher petrsaparov/git-hub-searcher:latest`.
 
 ## Функционал
 
