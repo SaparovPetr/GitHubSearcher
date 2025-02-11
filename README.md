@@ -2,20 +2,22 @@
 
 Публикация по [ссылке](https://sps-githubsearcher.netlify.app/).
 
-## Описаине
+## Описание
 
-Небольшое и минимально анимированное веб-приложение, которое позволяет искать репозитории на GitHub по имени пользователя и отображать информацию о найденных репозиториях.
+Небольшое веб-приложение, которое позволяет искать репозитории на GitHub по имени пользователя и отображать информацию о найденных репозиториях.
 
 Для получения данных использует [GitHub API](https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user).
 
 ## Инструкция по запуску
 
-Либо:
+Сначала сгинерируйте в своем профиле на GitHub токен доступа, следуя [инструкции](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token).
 
-- установить зависимости через `npm install`,
-- запустить приложение через `npm run start`,
+Затем запустите приложение либо:
 
-либо запустить на `http://localhost:8080/` из докер-контейнера:
+- установив зависимости через `npm install`
+- и выполнив `npm run start`,
+
+либо запустив его на `http://localhost:8080/` из докер-контейнера, предварительно спулив его ДокерХаба:
 
 - `docker pull petrsaparov/git-hub-searcher:latest`,
 - `sudo docker run -d -p 8080:80 --name git-hub-searcher petrsaparov/git-hub-searcher:latest`.
@@ -38,5 +40,3 @@ React, Redux Toolkit, TS, Webpack.
 ## Возможности улучшения
 
 - Сделать хук сохранения токена в локальное хранилище, чтобы при перезагрузке страницы не терялись данные.
-- Написать юнит-тесты.
-- Избавиться от примитивного дизайна.
