@@ -6,7 +6,7 @@
     font-weight: bold;
     font-size: 23px;
     text-align: center;
-    border: 1px solid rgb(145 128 128);
+    border: 1px solid white;
     border-radius: 15px;
 }
 
@@ -14,7 +14,11 @@
     padding: 5px 15px;
     color: white;
     font-size: 13px;
-    background-color: #323131;
-    border: 1px solid rgb(145 128 128);
+    background-color: transparent;
+    border: 1px solid white;
     border-radius: 8px;
+}
+
+.input::placeholder {
+    color: white;
 }
