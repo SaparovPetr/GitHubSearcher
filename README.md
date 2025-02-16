@@ -1,5 +1,7 @@
 # Проект GitHubSearcher (тестовое задание)
 
+<img src="./snapshot.png" />
+
 Публикация по [ссылке](https://sps-githubsearcher.netlify.app/).
 
 ## Описание
