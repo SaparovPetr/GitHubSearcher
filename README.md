@@ -19,7 +19,7 @@
 - установив зависимости через `npm install`
 - и выполнив `npm run start`,
 
-либо запустив его на `http://localhost:8080/` из докер-контейнера, предварительно спулив его ДокерХаба:
+либо запустив его на `http://localhost:8080/` из докер-контейнера, предварительно спулив его c [хаба](https://hub.docker.com/):
 
 - `docker pull petrsaparov/git-hub-searcher:latest`,
 - `sudo docker run -d -p 8080:80 --name git-hub-searcher petrsaparov/git-hub-searcher:latest`.
