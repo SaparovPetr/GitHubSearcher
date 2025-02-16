@@ -13,8 +13,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "..", "./dist"), //путь до папки dist изменился
     filename: production
-      ? "static/scripts/[name].[contenthash].js" // добавляем хеш к имени файла, если запускаем в режиме production
-      : "static/scripts/[name].js",
+      ? "scripts/[name].[contenthash].js" // добавляем хеш к имени файла, если запускаем в режиме production
+      : "scripts/[name].js",
     publicPath: "/",
   },
   module: {
@@ -32,14 +32,14 @@ module.exports = {
         test: /\.(png|jpg|gif|webp)$/,
         type: "asset/resource",
         generator: {
-          filename: "static/images/[hash][ext][query]",
+          filename: "images/[hash][ext][query]",
         },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
         generator: {
-          filename: "static/fonts/[hash][ext][query]",
+          filename: "fonts/[hash][ext][query]",
         },
       },
       {
@@ -83,7 +83,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "static/styles/[name].[contenthash].css",
+      filename: "styles/[name].[contenthash].css",
     }),
     //Плагин позволяет установить переменные окружения, можно переопределить переменную из блока script файла package.json
     new webpack.EnvironmentPlugin({
