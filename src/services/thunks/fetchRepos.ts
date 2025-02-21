@@ -49,7 +49,7 @@ export const getPublicReposCount = createAsyncThunk(
 			const data = await response.json();
 			return data.public_repos;
 		} catch (error) {
-			throw new Error("Ошибка при получении общего количества репозиториев:");
+			throw new Error("Ошибка при получении общего количества репозиториев");
 		}
 	}
 );

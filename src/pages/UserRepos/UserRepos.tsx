@@ -141,8 +141,11 @@ const UserRepos = () => {
 				{usernameFromInput.length > 0 &&
 					repos.length === 0 &&
 					!error &&
-					reqReposStatus !== RequestStatus.Loading && (
-						<p className={styles.hint_error}>Такой пользователь не найден</p>
+					reqReposStatus !== RequestStatus.Loading &&
+					reqReposStatus !== RequestStatus.Idle && (
+						<p className={styles.hint_error}>
+							У этого пользователя нет публичных репозиториев
+						</p>
 					)}
 			</div>
 		</>

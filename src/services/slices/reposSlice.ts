@@ -65,7 +65,7 @@ export const reposSlice = createSlice({
 			})
 			.addCase(fetchRepos.rejected, (state, action) => {
 				state.status = RequestStatus.Failed;
-				state.error = action.error.message || "Такой пользователь не найден.";
+				state.error = action.error.message || "Такой пользователь не найден";
 			})
 
 			.addCase(getPublicReposCount.fulfilled, (state, action) => {
@@ -75,7 +75,7 @@ export const reposSlice = createSlice({
 				state.status = RequestStatus.Failed;
 				state.error =
 					action.error.message ||
-					"Не удалось загрузить общее число репозиториев.";
+					"Не удалось загрузить общее число репозиториев";
 			});
 	},
 });
