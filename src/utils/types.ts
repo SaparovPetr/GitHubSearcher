@@ -13,7 +13,7 @@ export const enum RequestStatus {
 	Failed = "Failed",
 }
 
-/** Типизация оодного репозитория */
+/** Типизация одного репозитория */
 export type TRepo = {
 	id: number;
 	name: string;
@@ -29,4 +29,11 @@ export type TLabledInput = {
 	inputValue: string;
 	placeholder: string;
 	onChange: ChangeEventHandler<HTMLInputElement>;
+};
+
+/** Типизация экшена запроса репозиториев */
+export type TFetchRepos = {
+	username: string;
+	token: string;
+	currentPage: number;
 };

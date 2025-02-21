@@ -66,7 +66,8 @@ export const reposSlice = createSlice({
 			.addCase(fetchRepos.rejected, (state, action) => {
 				state.status = RequestStatus.Failed;
 				state.error =
-					action.error.message || "Укажите пользователя. Используйте латиницу.";
+					action.error.message ||
+					"Такой пользователь не найден. Попробуйте снова. Используйте латиницу.";
 			})
 
 			.addCase(getPublicReposCount.fulfilled, (state, action) => {

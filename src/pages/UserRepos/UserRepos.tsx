@@ -20,6 +20,7 @@ import { rewriteDate } from "../../utils/rewriteDate";
 import styles from "./UserRepos.module.css";
 import LabledInput from "../../components/labeledInput/LabaledInput";
 import { RequestStatus } from "../../utils/types";
+import useDebounce from "../../hooks/useDebounce";
 
 const UserRepos = () => {
 	const [usernameFromInput, setUsernameFromInput] = useState<string>("");
@@ -32,18 +33,20 @@ const UserRepos = () => {
 	const error = useAppSelector(selectErrorWithRepo);
 	const currentPage = useAppSelector(selectCurientPage);
 
+	const debouncedEntry = useDebounce(usernameFromInput, 1500);
+
 	/** Эффекты изменения содержимого инпута */
 	useEffect(() => {
-		if (usernameFromInput && !usernameFromInput.startsWith(" ")) {
+		if (debouncedEntry && !debouncedEntry.startsWith(" ")) {
 			dispatch(resetStore());
-			dispatch(getPublicReposCount(usernameFromInput));
-			dispatch(fetchRepos({ username: usernameFromInput, token, currentPage }));
+			dispatch(getPublicReposCount(debouncedEntry));
+			dispatch(fetchRepos({ username: debouncedEntry, token, currentPage }));
 		}
 
-		if (usernameFromInput === "") {
+		if (debouncedEntry === "") {
 			dispatch(resetStore());
 		}
-	}, [usernameFromInput]);
+	}, [debouncedEntry]);
 
 	/** Эффект изменения флага "необходима подгрузка" */
 	useEffect(() => {

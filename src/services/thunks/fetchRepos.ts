@@ -1,22 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Octokit } from "@octokit/rest";
+import { TFetchRepos } from "../../utils/types";
 
 /** Асинхронный экшен (санк) получения репозиториев
  * @param username имя искомого пользователя
  * @param token токен для проверки факта авторизации
  * @param currentPage текущая страница
  */
+
 export const fetchRepos = createAsyncThunk(
 	"rep/fetchRepos",
-	async ({
-		username,
-		token,
-		currentPage,
-	}: {
-		username: string;
-		token: string;
-		currentPage: number;
-	}) => {
+	async ({ username, token, currentPage }: TFetchRepos) => {
 		try {
 			const octokit = new Octokit({
 				auth: token,
