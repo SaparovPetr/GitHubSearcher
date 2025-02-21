@@ -32,8 +32,8 @@ export type TLabledInput = {
 };
 
 /** Типизация экшена запроса репозиториев */
-export type TFetchRepos = {
+export interface IFetchRepos {
 	username: string;
 	token: string;
 	currentPage: number;
-};
+}

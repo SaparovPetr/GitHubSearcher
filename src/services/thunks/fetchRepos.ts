@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Octokit } from "@octokit/rest";
-import { TFetchRepos } from "../../utils/types";
+import { IFetchRepos } from "../../utils/types";
 
 /** Асинхронный экшен (санк) получения репозиториев
  * @param username имя искомого пользователя
@@ -10,7 +10,7 @@ import { TFetchRepos } from "../../utils/types";
 
 export const fetchRepos = createAsyncThunk(
 	"rep/fetchRepos",
-	async ({ username, token, currentPage }: TFetchRepos) => {
+	async ({ username, token, currentPage }: IFetchRepos) => {
 		try {
 			const octokit = new Octokit({
 				auth: token,
